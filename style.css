@@ -47,6 +47,34 @@ table {
 	border-spacing: 0;
 }
 
+.header-text {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: black;
+}
+
+h2.header-text {
+  margin-bottom: .75rem;
+  font-size: 3.5rem;
+}
+
+.body-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 0rem 1.5rem;
+  line-height: 150%;
+  color: #535353;
+}
+
+#contact-section .header-text,
+#contact-section .body-text {
+  color: white;
+}
+
 body {
   display: flex;
   flex-wrap: wrap;
@@ -57,13 +85,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+section:not(#header-section) {
   padding-top: 4rem;
 }
 
-section.contact-section {
-  justify-content: start;
+#header-section {
+  padding-top: 2rem; 
 }
-
 
 img {
   min-width: 300px;
@@ -81,7 +111,7 @@ img {
   height: auto;
 }
 
-.overlay-text {
+#overlay-text {
   position: absolute;
   left: 50%; 
   bottom: -38%;
@@ -92,31 +122,13 @@ img {
   text-shadow: 3px 4px 9px rgba(0, 0, 0, 0.714);
 }
 
-@media (max-width: 300px) {
-  img {
-
-  }
-}
-
-h2 {
-  font-size: 4rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-
-.projects-section {
+#projects-section {
   display: grid;
-  /* align-items: center; */
 }
 
 .projects-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  /* justify-items: center; */
-
   background-color: brown;
   gap: 5rem;
 }
@@ -143,23 +155,12 @@ p {
   justify-self: end;
 }
 
-.contact-section {
+#contact-section {
+  justify-content: start;
   background-color: #3192b1;
-  color: white;
 }
 
 
-
-
-
-
-
-
-/* Playfair Display and Roboto in the design, both available with Google fonts. */
-
 /* In the design we have icon-links for GitHub, LinkedIn and X (formerly known as Twitter). Obviously feel free to add whatever links you want to your own site. We got those icons from https://devicon.dev/.
 
-
 Other icons (phone, email and external link) were downloaded as SVGs from https://materialdesignicons.com/. */
-
-
