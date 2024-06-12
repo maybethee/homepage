@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,16 +49,23 @@ table {
 	border-spacing: 0;
 }
 
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .header-text {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
+  text-align: center;
   color: black;
 }
 
 h2.header-text {
-  margin-bottom: .75rem;
+  margin-bottom: 2rem;
   font-size: 3.5rem;
 }
 
@@ -75,12 +84,6 @@ h2.header-text {
   color: white;
 }
 
-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 section {
   display: flex;
   flex-wrap: wrap;
@@ -88,14 +91,20 @@ section {
 }
 
 section:not(#header-section) {
-  padding-top: 4rem;
+  margin-top: 4rem;
 }
 
 #header-section {
   padding-top: 2rem; 
+
 }
 
-img {
+#about-section .icon {
+  height: 50px;
+  width: 50px;
+}
+
+img:not(.icon) {
   min-width: 300px;
   max-width: 400px;
 }
@@ -122,6 +131,18 @@ img {
   text-shadow: 3px 4px 9px rgba(0, 0, 0, 0.714);
 }
 
+.projects.header-text {
+  padding: .8rem 0rem;
+  font-size: 1.75rem;
+}
+
+.projects.body-text {
+  font-size: 1.2rem;
+  padding-right: 2rem;
+  padding-bottom: 2.5rem;
+  line-height: 120%;
+}
+
 #projects-section {
   display: grid;
 }
@@ -129,38 +150,77 @@ img {
 .projects-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  background-color: brown;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .project-container {
-  background-color: gray;
+  background-color: white;
   display: grid;
-
-  max-width: 500px;
+  text-align: left;
+  max-width: 450px;
+  box-shadow: 6px 12px 19px -4px rgba(158,158,158,1);
+  padding-bottom: 3rem;
 }
 
 .project-screenshot {
-  height: 200px;
+  height: 400px;
   background-color: gray;
 }
 
 .project-name-row {
-  background-color: orange;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .link-icons {
+  display: flex;
   justify-self: end;
 }
 
-#contact-section {
-  justify-content: start;
-  background-color: #3192b1;
+.link-icons .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: -1.1rem;
 }
 
+#contact-section {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #3192b1;
+  padding-right: 1.5rem;
+}
 
-/* In the design we have icon-links for GitHub, LinkedIn and X (formerly known as Twitter). Obviously feel free to add whatever links you want to your own site. We got those icons from https://devicon.dev/.
+#contact-section .header-text {
+  margin-top: 2rem;
+}
 
-Other icons (phone, email and external link) were downloaded as SVGs from https://materialdesignicons.com/. */
+#contact-body {
+  line-height: 120%;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  line-height: 120%;
+}
+
+.link-row {
+  display: flex;
+  justify-content: center;
+  margin-top: .75rem;
+  margin-bottom: 4rem;
+}
+
+.icon {
+  padding: 1rem;
+  width: 75px;
+  height: 75px;
+}
+
+img#profile-img-bottom {
+  max-width: 100%;
+}
+
