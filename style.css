@@ -98,7 +98,7 @@ section:not(#header-section, #contact-section) {
   position: relative;
 }
 
-#design-element {
+.design-element {
   position: absolute;
   background-color: #3192b1;
   width: 200vw;
@@ -131,7 +131,8 @@ img:not(.icon) {
   height: auto;
 }
 
-#overlay-text {
+.overlay-text {
+  font-family: "Playfair Display", serif;
   position: absolute;
   right: 5%;
   bottom: 3%;
@@ -139,7 +140,7 @@ img:not(.icon) {
   line-height: 115%;
   color: white; 
   font-size: 5rem; 
-  text-shadow: 3px 4px 9px rgba(0, 0, 0, 0.714);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.514);
 }
 
 .projects.header-text {
@@ -233,4 +234,146 @@ img:not(.icon) {
 
 img#profile-img-bottom {
   max-width: 100%;
+}
+
+.non-mobile {
+  display: none;
+}
+
+/* tablet size screen */
+
+@media (min-width: 551px) {
+  
+  .header-text {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+  h2.about {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1.2rem;
+    padding-left: 16rem;
+  }
+
+  .body-text {
+    font-size: .98rem;
+  }
+
+  body {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
+  section#about-section {
+    margin: 10rem 4rem 4rem 4rem;
+  }
+
+  #header-section {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    position: relative;
+    align-items: start;
+    background-color: white;
+    z-index: 1;
+  }
+
+  img.non-mobile {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .non-mobile {
+    display: block;
+  } 
+
+  .img-container {
+    margin-right: 2rem;
+    position: absolute;
+    top: 14%;
+    left: -50px;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .image-placeholder {
+    float: left;
+    height: 260px;
+    width: 240px;
+    margin-right: 1rem;
+  }
+
+  .design-element {
+    top: -230px;
+    left: -100px;
+    transform: rotate(-15deg);  
+    position: absolute;
+    z-index: -1;
+  }
+
+  .overlay-text {
+    font-size: 3.5rem;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    right: -100%;
+    bottom: 72%;
+  }
+
+  #about-section {
+    border: solid 1px black;
+  }
+
+  .text-container {
+    padding-bottom: 4rem;
+  }
+
+  .text-container .link-row {
+    display: none;
+  }
+
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 3.5rem;
+  }
+  
+  .project-container {
+    max-width: 300px;
+    padding: 0rem;
+  }
+  
+  .project-screenshot {
+    height: 200px;
+  }
+
+  .projects.header-text {
+    padding: 0rem;
+    font-size: 1.2rem;
+  }
+  
+  .projects.body-text {
+    font-size: .9rem;
+    margin: 0rem;;
+    line-height: 120%;
+  }
 }
