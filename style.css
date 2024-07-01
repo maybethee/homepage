@@ -3,8 +3,9 @@
    License: none (public domain)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+/* prettier-ignore */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,28 +26,34 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+/* prettier-ignore */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
@@ -94,18 +101,18 @@ section:not(#header-section, #contact-section) {
 }
 
 #header-section {
-  padding-top: 2rem; 
+  padding-top: 2rem;
   position: relative;
 }
 
 .design-element {
   position: absolute;
   background-color: #3192b1;
-  width: 200vw;
-  height: 550px;
   top: -20%;
-  transform: rotate(-30deg);
-  box-shadow: 0px 12px 15px -15px rgba(0,0,0,0.75);
+  height: 750px;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 65vw), 0% 100%);
+  box-shadow: 0px 12px 15px -15px rgba(0, 0, 0, 0.75);
 }
 
 #about-section .icon {
@@ -116,7 +123,7 @@ section:not(#header-section, #contact-section) {
 img:not(.icon) {
   min-width: 300px;
   max-width: 400px;
-  box-shadow: 0px 12px 15px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 12px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 .img-container {
@@ -138,13 +145,13 @@ img:not(.icon) {
   bottom: 3%;
   text-align: right;
   line-height: 115%;
-  color: white; 
-  font-size: 5rem; 
+  color: white;
+  font-size: 5rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.514);
 }
 
 .projects.header-text {
-  padding: .8rem 0rem;
+  padding: 0.8rem 0rem;
   font-size: 1.75rem;
 }
 
@@ -169,7 +176,7 @@ img:not(.icon) {
   display: grid;
   text-align: left;
   max-width: 450px;
-  box-shadow: 6px 12px 19px -4px rgba(158,158,158,1);
+  box-shadow: 6px 12px 19px -4px rgba(158, 158, 158, 1);
   padding-bottom: 5rem;
 }
 
@@ -191,7 +198,7 @@ img:not(.icon) {
 .link-icons .icon {
   width: 38px;
   height: 38px;
-  margin: .1rem .1rem 0rem -1.1rem;
+  margin: 0.1rem 0.1rem 0rem -1.1rem;
 }
 
 #contact-section {
@@ -215,14 +222,14 @@ img:not(.icon) {
 
 .contact-info {
   font-size: 1.2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   line-height: 120%;
 }
 
 .link-row {
   display: flex;
   justify-content: center;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
   margin-bottom: 4rem;
 }
 
@@ -240,9 +247,13 @@ img#profile-img-bottom {
   display: none;
 }
 
+#contact-phone,
+#contact-email {
+  display: none;
+}
+
 /* tablet size screen */
-@media (min-width: 551px) {
-  
+@media (min-width: 700px) {
   .header-text {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -264,7 +275,7 @@ img#profile-img-bottom {
   }
 
   .body-text {
-    font-size: .98rem;
+    font-size: 0.98rem;
   }
 
   body {
@@ -279,7 +290,7 @@ img#profile-img-bottom {
     justify-content: center;
     margin: 0rem 0rem;
   }
-  
+
   section#about-section {
     margin: 10rem 4rem 4rem 4rem;
   }
@@ -300,10 +311,10 @@ img#profile-img-bottom {
     max-height: 400px;
     object-fit: cover;
   }
-  
+
   .non-mobile {
     display: block;
-  } 
+  }
 
   .img-container {
     margin-right: 2rem;
@@ -322,15 +333,12 @@ img#profile-img-bottom {
   }
 
   .design-element {
-    top: -230px;
-    left: -100px;
-    transform: rotate(-15deg);  
-    position: absolute;
-    z-index: -1;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 35vh), 0% 100%);
   }
 
   .overlay-text {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: clamp(2.5rem, 1.6667rem + 2.6667vw, 3rem);
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -340,7 +348,7 @@ img#profile-img-bottom {
   }
 
   #about-section {
-    box-shadow: 2px 2px 13px 1px rgba(160,160,160,1);
+    box-shadow: 2px 2px 13px 1px rgba(160, 160, 160, 1);
   }
 
   .text-container {
@@ -359,18 +367,18 @@ img#profile-img-bottom {
     column-gap: 2rem;
     row-gap: 3.5rem;
   }
-  
+
   .project-container {
     max-width: 300px;
     padding: 0rem;
   }
-  
+
   .project-screenshot {
     height: 210px;
   }
 
   .projects.header-text,
-  .projects.body-text, 
+  .projects.body-text,
   .contact-header.header-text {
     text-align: left;
   }
@@ -380,19 +388,19 @@ img#profile-img-bottom {
   }
 
   .projects.header-text {
-    padding: .8rem 0rem 0rem 1rem;
-    font-size: .9rem;
+    padding: 0.8rem 0rem 0rem 1rem;
+    font-size: 0.9rem;
   }
-  
+
   .projects.body-text {
-    padding: 0rem .9rem 0rem 1rem;
+    padding: 0rem 0.9rem 0rem 1rem;
     margin: 0rem 0rem 3rem 0rem;
-    font-size: .68rem;
+    font-size: 0.68rem;
   }
 
   .icon {
     max-width: 20px;
-    padding: .3rem .7rem .3rem 1rem;
+    padding: 0.3rem 0.7rem 0.3rem 1rem;
   }
 
   #profile-img-bottom {
@@ -405,7 +413,7 @@ img#profile-img-bottom {
   }
 
   .contact-text-column .body-text {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 0rem;
   }
 
@@ -424,7 +432,7 @@ img#profile-img-bottom {
   .contact-img-column {
     justify-self: right;
     align-self: center;
-    margin-right: .8rem;
+    margin-right: 0.8rem;
   }
 
   .contact .profile-img {
@@ -449,11 +457,12 @@ img#profile-img-bottom {
   #contact-email {
     display: flex;
     align-items: center;
-    column-gap: .6rem;
+    column-gap: 0.6rem;
   }
 
   .white-icon {
-    filter: invert(78%) sepia(100%) saturate(0%) hue-rotate(213deg) brightness(108%) contrast(107%);
+    filter: invert(78%) sepia(100%) saturate(0%) hue-rotate(213deg)
+      brightness(108%) contrast(107%);
     max-width: 30px;
     max-height: 30px;
   }
