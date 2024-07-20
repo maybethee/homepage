@@ -467,3 +467,93 @@ img#profile-img-bottom {
     max-height: 30px;
   }
 }
+
+/* desktop size */
+@media (min-width: 980px) {
+  h2.about,
+  h2.header-text {
+    margin-top: 1.5rem;
+  }
+
+  .about.header-text {
+    font-size: 1.5rem;
+    margin-top: 1.7rem;
+    margin-left: 0rem;
+  }
+
+  .body-text {
+    font-size: 0.8rem;
+  }
+
+  section#about-section {
+    justify-content: center;
+    margin: 5rem 4rem 4rem 4rem;
+  }
+
+  img.non-mobile {
+    min-height: 400px;
+    min-width: 400px;
+  }
+
+  .img-container {
+    box-shadow: 4px 10px 10px -4px rgba(94, 94, 94, 0.191);
+    transform: translateY(-25%);
+    position: absolute;
+    top: 19%;
+    left: -0px;
+    z-index: 2;
+  }
+
+  .image-placeholder {
+    width: 400px;
+    margin-right: 1rem;
+  }
+
+  .design-element {
+    height: 700px;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 18vw), 0% 100%);
+  }
+
+  .overlay-text {
+    font-size: 2.6rem;
+    right: 4%;
+    bottom: 1%;
+  }
+
+  .text-container {
+    max-width: calc(45rem + 10vw);
+    height: 17rem;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 0rem;
+  }
+
+  #text-container-second-row {
+    justify-self: end;
+    align-self: end;
+    padding: 0rem 1.25rem 1.25rem 0rem;
+  }
+
+  .text-container .link-row {
+    display: block;
+  }
+
+  #about-section .icon {
+    height: 25px;
+    width: 25px;
+    padding: 0rem 0.5rem 0rem 0rem;
+  }
+
+  section:not(#about-section) {
+    margin-top: 1.5rem;
+  }
+
+  section#contact-section {
+    margin-top: 5rem;
+  }
+
+  .contact-img-column img {
+    min-width: 600px;
+  }
+}
